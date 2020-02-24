@@ -13,12 +13,6 @@ using namespace std;
 int main()
 {
    
-   
-   
-  
-    
-    
-    
     Gcalcs* gc;
     
     int twi_key1;
@@ -59,6 +53,6 @@ int main()
         break;
    
     }
-   
+
     }
 

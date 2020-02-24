@@ -1,7 +1,21 @@
-﻿  GCalcs.cpp
+﻿  Arr.cpp
 C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(68,45): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
 C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(75,56): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
 C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(81,67): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
 C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(87,78): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
-C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\GCalcs.cpp(228,15): warning C4101: sum: неиспользованная локальная переменная
+  GCalcs.cpp
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(68,45): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(75,56): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(81,67): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(87,78): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\GCalcs.cpp(255,15): warning C4101: sum: неиспользованная локальная переменная
+  Lists.cpp
+  s3ctl9t.cpp
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(68,45): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(75,56): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(81,67): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(87,78): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\GCalcs.cpp(255,15): warning C4101: sum: неиспользованная локальная переменная
+  SList.cpp
+  Создание кода...
   s3ctl9t.vcxproj -> C:\Users\usr\source\repos\s3ctl9t\Debug\s3ctl9t.exe

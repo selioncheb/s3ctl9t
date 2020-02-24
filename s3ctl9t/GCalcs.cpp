@@ -19,7 +19,8 @@ public:
     Gcalcs(char* bufA, char* bufB, char* bufC, char* bufD, int twi_key) {
         int i = 0;
         Arr* ar = new Arr(0);
-        if (twi_key == 1) { //list
+        //list
+        if (twi_key == 1) { 
             Slist* sl;
             Slist* ssl;
             Lists* lst = new Lists();
@@ -34,20 +35,19 @@ public:
             cout << "Erase dublicates in each array?" << endl << "1 - Yes" << endl << "2 - No" << endl << "Selection - ";
             cin >> twi_key;
             if (twi_key == 1) {
-               
-                    i = i + this->LSCln(sl);
-                    i = i + this->LSCln(ssl);
-                  
+                    this->LSCln(sl);
+                    this->LSCln(ssl);    
             }
             else if (twi_key == 2) {
-
+                
             }
             else {
                 cout << "Error. Wrong value: " << twi_key << endl;
                 exit(1);
             }
-
+          
             this->ListCalc(ssl, i);
+         
             cout << "Calculated values in E:" << endl;
             lst->print(sl->next, 69);
 
@@ -57,9 +57,9 @@ public:
             cout << "Erase dublicates in each array?" << endl << "1 - Yes" << endl << "2 - No" << endl << "Selection - ";
             cin >> twi_key;
             if (twi_key == 1) {
-                cout << "bufA1 = " << bufA<<endl;
+              
                bufA = this->ArrCln(bufA);
-               cout << "bufA1 = " << bufA << endl;
+              
                bufB = this->ArrCln(bufB);
                bufC = this->ArrCln(bufC);
                bufD = this->ArrCln(bufD);
@@ -76,6 +76,7 @@ public:
             this->ArrCalc(ar);
             ar->printE(ar);
         }
+       
     }
     //calculate E = A / B / C + D in Arrays
 	void ArrCalc(Arr *ar) {
@@ -144,12 +145,13 @@ public:
         }
     //calculate E = A / B / C + D in Lists
     void ListCalc(Slist* sl, int quot) {
-    
+      
         int i;
         int z; //count of equals A / B / C
         i = 0;
         z = 0;
-
+      
+        // A/B
         for (int a = 0; a < sl->len; a++) {
             for (int b = 0; b < sl->next->len; b++) {
                 if (sl->val[a] == sl->next->val[b]) {
@@ -158,6 +160,7 @@ public:
                     z++;
                 }
             }
+
             // A/C
             for (int c = 0; c < sl->next->next->len; c++) {
                 if (sl->val[a] == sl->next->next->val[c]) {
@@ -167,60 +170,84 @@ public:
             }
         }
         // E = count A + count D - count of symbols excluded from A
-    
-       
+     
         Slist* sli = new Slist();
         
         sli->len = sl->len + sl->next->next->next->len - z - quot;
+
         char* s = new char[sli->len];
-       
         sli->next = nullptr;
-        sl->next->next->next->next = sli;
-        sli->val = new char[sli->len];
-      
         //   char* E = new char(ar->ai + ar->di-z);
     // E = A* (A* = A/B/C)
         for (int a = 0; a < sl->len; a++) {
             if (sl->val[a] != NULL) {
-             
-                sli->val[i] = sl->val[a];
-               
+                s[i] = sl->val[a];
                 i++;
-               
             }
         }
+
         //E = E + D
         for (int d = 0; d < sl->next->next->next->len; d++) {
 
-            sli->val[i] = sl->next->next->next->val[d];
+            s[i] = sl->next->next->next->val[d];
          
             i++;
            
         }
+ 
+        sli->val = s;
+
+        sl->next->next->next->next = sli;
+
+        cout << "Erase duplicates in E?" << endl << "1 - Yes" << endl << "2 - No" << endl << "Selection - ";
+        cin >> quot;
+        if (quot == 1) {
+           
+            this->LSCln(sli);
+           
+        }
+        else if (quot == 2) {
+        }
+        else {
+            cout << "Error: Wrong ansver " << quot << endl;
+        }
+       
+       
+        
         sli->val[sli->len] = '\0';
         
     }
     //Clean doubles in Lists
-    int LSCln(Slist* sl) {
-      
+    void LSCln(Slist* sl) {
+        int len = sl->len;
         int num = 0;
         int i = 0;
         int j = 1;
-        while (i < sl->len) {
-            while (j < sl->len) {
-                if (sl->val[i]==sl->val[j]) {
+        while (i < len) {
+            while (j < len) {
+                if ((sl->val[i]==sl->val[j])&(sl->val[i] != NULL)) {
                     sl->val[j] = NULL;
                     num++;
-
                 }
                 j++;
             }
             i++;
-            j = i + 1;
+            j = i+1;
         }
+        i = 0;
 
-
-        return num;
+        char* a = new char[len - num];
+      
+        sl->len = len - num;
+        for (int h = 0; h < len; h++) {
+            if (sl->val[h]!=NULL) {
+                a[i] = sl->val[h];
+                i++;
+            }
+        }
+        delete[] sl->val;
+        sl->val = a;
+        
     }
     //clean doubles in Arrays
     char* ArrCln(char* buf) {
@@ -245,7 +272,7 @@ public:
             j++;
             i = k - 1;
         }
-     
+        buf[j] = NULL;
         return buf;
     } 
 

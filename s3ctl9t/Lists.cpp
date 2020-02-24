@@ -8,6 +8,7 @@ public:
 		sl->next = nullptr;
 		sl->len = strlen(buf);
 		sl->val = buf;
+		sl->val[sl->len] = '\0';
 		return sl;
 	}
 	//add node
@@ -17,7 +18,7 @@ public:
 		nsl->len = strlen(buf);
 		nsl->val = buf;
 		sl->next = nsl;
-		
+		sl->val[sl->len] = '\0';
 		return nsl;
 	
 	}
@@ -26,7 +27,7 @@ public:
 		
 		while (sl != nullptr)
 		{
-			std::cout << (char)i <<" = " << sl->val<<std::endl;
+			std::cout << (char)i <<" = " << sl->val<<std::endl<<"Size "<<(char)i<<" = "<<strlen(sl->val)<<std::endl;
 			i++;
 			sl = sl->next;
 	} 
