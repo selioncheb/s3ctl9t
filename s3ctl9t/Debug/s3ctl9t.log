@@ -1,0 +1,7 @@
+﻿  GCalcs.cpp
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(68,45): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(75,56): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(81,67): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\Arr.cpp(87,78): warning C4244: аргумент: преобразование "time_t" в "int", возможна потеря данных
+C:\Users\usr\source\repos\s3ctl9t\s3ctl9t\GCalcs.cpp(228,15): warning C4101: sum: неиспользованная локальная переменная
+  s3ctl9t.vcxproj -> C:\Users\usr\source\repos\s3ctl9t\Debug\s3ctl9t.exe
